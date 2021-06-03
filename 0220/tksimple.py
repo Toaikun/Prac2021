@@ -11,9 +11,9 @@ class Application(tk.Frame):
         self.quitButton = tk.Button(self, text='Quit', command=self.quit)
         self.timeButton = tk.Button(self, text='Time', command=self.settime)
         self.timeLabel = tk.Label = tk.Label(self, text = "<time>")
-        self.quitButton.grid()
-        self.timeButton.grid()
-        self.timeLabel.grid()
+        self.quitButton.grid(row = 0, column = 1)
+        self.timeButton.grid(row = 0, column = 0)
+        self.timeLabel.grid(columnspan = 2)
 
     def settime(self):
     	self.timeLabel["text"] = time.strftime("%c")
