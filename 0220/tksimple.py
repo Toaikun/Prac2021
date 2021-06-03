@@ -1,4 +1,5 @@
 import tkinter as tk
+import time
 
 class Application(tk.Frame):
     def __init__(self, master=None):
@@ -13,6 +14,9 @@ class Application(tk.Frame):
         self.quitButton.grid()
         self.timeButton.grid()
         self.timeLabel.grid()
+
+    def settime(self):
+    	self.timeLabel["text"] = time.strftime("%c")
 
 app = Application()
 app.master.title('Sample timer application')
